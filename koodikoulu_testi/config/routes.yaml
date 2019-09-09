@@ -1,3 +1,26 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+laskePalkka:
+    path: /esimerkki/esim1
+    controller: App\Controller\EsimerkitController::laskePalkka
+
+tarkistaKarkausvuosi:
+    path: /esimerkki/esim2
+    controller: App\Controller\EsimerkitController::tarkistaKarkausvuosi
+
+laskePH:
+    path: /esimerkki/esim3
+    controller: App\Controller\EsimerkitController::laskePH
+
+heitaNoppaa:
+    path: /esimerkki/esim4
+    controller: App\Controller\EsimerkitController::heitaNoppaa
+
+naytaJSON:
+    path: /esimerkki/esim5
+    controller: App\Controller\EsimerkitController::naytaJSON
+
+lihapiirakka:
+    path: /esimerkki/esim6
+    controller: App\Controller\EsimerkitController::lihapiirakka
