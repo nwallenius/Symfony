@@ -1,0 +1,7 @@
+<h1>Onko karkausvuosi?</h1>
+
+{% if vuosi % 4 == 0 %}
+    Vuosi {{ vuosi }} on karkausvuosi.  
+{% else %}
+    Vuosi {{ vuosi }} ei ole karkausvuosi.
+{% endif %}

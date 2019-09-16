@@ -1,0 +1,7 @@
+<h1>Lasketaan nettopalkka bruttopalkan perusteella</h1>
+
+{% if bruttopalkka <= 0 %}
+    Palkka ei saa olla nolla.
+{% else %}
+    Kun brutopalkka on {{ bruttopalkka }}, niin nettopalkka on {{ nettopalkka }}.
+{% endif %}

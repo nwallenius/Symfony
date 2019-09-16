@@ -1,0 +1,79 @@
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<table class="table table-striped">
+  <thead class="bg-success">
+    <tr>
+      <th>Kuntoilija</th>
+      <th>Hölkkä (km)</th>
+      <th>Hiihto (km)</th>
+      <th>Kävely (km)</th>
+      <th>Kuntopisteet yhteensä</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ kuntoilijat['k1'][0] }}</td>
+      <td>{{ kuntoilijat['k1'][1] }}</td>
+      <td>{{ kuntoilijat['k1'][2] }}</td>
+      <td>{{ kuntoilijat['k1'][3] }}</td>
+      <td>{{ kuntopisteet1 }}</td>
+    </tr>
+        <tr>
+      <td>{{ kuntoilijat['k2'][0] }}</td>
+      <td>{{ kuntoilijat['k2'][1] }}</td>
+      <td>{{ kuntoilijat['k2'][2] }}</td>
+      <td>{{ kuntoilijat['k2'][3] }}</td>
+      <td>{{ kuntopisteet2 }}</td>
+    </tr>
+        <tr>
+      <td>{{ kuntoilijat['k3'][0] }}</td>
+      <td>{{ kuntoilijat['k3'][1] }}</td>
+      <td>{{ kuntoilijat['k3'][2] }}</td>
+      <td>{{ kuntoilijat['k3'][3] }}</td>
+      <td>{{ kuntopisteet3 }}</td>
+    </tr>
+    <tr>
+      <td>{{ kuntoilijat['k4'][0] }}</td>
+      <td>{{ kuntoilijat['k4'][1] }}</td>
+      <td>{{ kuntoilijat['k4'][2] }}</td>
+      <td>{{ kuntoilijat['k4'][3] }}</td>
+      <td>{{ kuntopisteet4 }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Kuntopisteet:</h3>
+
+
+{% if kuntopisteet1 > 100 %}
+    {{ kuntoilijat['k1'][0] }}: Sinulla on hyvä kunto!
+{% else %}
+    {{ kuntoilijat['k1'][0] }}: Sinulla on tyydyttävä kunto.
+{% endif %}
+
+<br><br>
+
+{% if kuntopisteet2 > 100 %}
+    {{ kuntoilijat['k2'][0] }}: Sinulla on hyvä kunto!
+{% else %}
+    {{ kuntoilijat['k2'][0] }}: Sinulla on tyydyttävä kunto.
+{% endif %}
+
+<br><br>
+
+{% if kuntopisteet3 > 100 %}
+    {{ kuntoilijat['k3'][0] }}: Sinulla on hyvä kunto!
+{% else %}
+    {{ kuntoilijat['k3'][0] }}: Sinulla on tyydyttävä kunto.
+{% endif %}
+
+<br><br>
+
+{% if kuntopisteet4 > 100 %}
+    {{ kuntoilijat['k4'][0] }}: Sinulla on hyvä kunto!
+{% else %}
+    {{ kuntoilijat['k4'][0] }}: Sinulla on tyydyttävä kunto.
+{% endif %}
+

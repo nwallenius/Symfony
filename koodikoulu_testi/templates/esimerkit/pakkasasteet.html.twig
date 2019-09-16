@@ -1,0 +1,50 @@
+<h1>Viikon {{ viikko }} pakkasasteet</h1>
+(Laatinut: {{ tekija }}) <br><br>
+
+Ma: {{ pakkasasteet['ma'] }} <sup>o</sup>C <br>
+Ti: {{ pakkasasteet['ti'] }} <sup>o</sup>C <br>
+Ke: {{ pakkasasteet['ke'] }} <sup>o</sup>C <br>
+To: {{ pakkasasteet['to'] }} <sup>o</sup>C <br>
+Pe: {{ pakkasasteet['pe'] }} <sup>o</sup>C <br>
+La: {{ pakkasasteet['la'] }} <sup>o</sup>C <br>
+Su: {{ pakkasasteet['su'] }} <sup>o</sup>C <br>
+Pakkaspäivät (ka): {{ keskiarvo1 }} <sup>o</sup>C <br>
+Koko viikko (ka): {{ keskiarvo2 }} <sup>o</sup>C <br><br>
+
+
+
+<h3>Harjoitus 10:</h3>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Viikko</th>
+      <th>Ma</th>
+      <th>Ti</th>
+      <th>Ke</th>
+      <th>To</th>
+      <th>Pe</th>
+      <th>La</th>
+      <th>Su</th>
+      <th>Ka (pp)</th>
+      <th>Ka (viikko)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>{{ viikko }}</strong></td>
+      <td>{{ pakkasasteet['ma'] }}</td>
+      <td>{{ pakkasasteet['ti'] }}</td>
+      <td>{{ pakkasasteet['ke'] }}</td>
+      <td>{{ pakkasasteet['to'] }}</td>
+      <td>{{ pakkasasteet['pe'] }}</td>
+      <td>{{ pakkasasteet['la'] }}</td>
+      <td>{{ pakkasasteet['su'] }}</td>
+      <td>{{ keskiarvo1 }}</td>
+      <td>{{ keskiarvo2 }}</td>
+    </tr>
+  </tbody>
+</table>

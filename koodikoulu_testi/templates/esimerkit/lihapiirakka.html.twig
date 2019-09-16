@@ -1,0 +1,10 @@
+<h1>Lihapiirakkaongelma</h1>
+
+Lompakossa on rahaa {{ rahaa }} euroa.<br>
+Lihis maksaa {{ lihis }} euroa.<br><br>
+
+{% if rahaa >= lihis %}
+    Ostit lihiksen. Lompakkoon jää rahaa {{ rahaaJaljella }} euroa.
+{% else %}
+    Sulla ei ole rahaa lihikseen. Pitäiskö sun vähän paastota?
+{% endif %}

@@ -1,5 +1,8 @@
 <?php
 
+// Harjoitukset 1 - 6
+
+
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
@@ -10,7 +13,8 @@ class EsimerkitController {
     // Kontrollerit tulee tänne
 
 
-    // Harjoitus 1 (tehtiin hiukan erilailla kuin tehtävänannossa)
+    // Harjoitus 1 
+    // Lasketaan nettopalkka bruttopalkan perusteella
     public function laskePalkka() {
         $nettopalkka = 4500 * 0.7;
 
@@ -54,7 +58,7 @@ class EsimerkitController {
             'Etunimi' => 'Pekka',
             'Sukunimi' => 'Nieminen'
         ];
-        // Pyydetään Response-oliota näyttämään tulos
+        // Pyydetään JsonResponse-oliota näyttämään tulos
         return new JsonResponse($nimet);
     }
 
@@ -76,7 +80,7 @@ class EsimerkitController {
             return new Response('Pitäiskö sun vähän paastota!?!');
         }
     }
-    
+
 
 }
 

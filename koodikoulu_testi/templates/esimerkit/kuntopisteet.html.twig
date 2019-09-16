@@ -1,0 +1,38 @@
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<table class="table table-striped">
+  <thead class="bg-success">
+    <tr>
+      <th>Kuntoilija</th>
+      <th>Hölkkä (km)</th>
+      <th>Hiihto (km)</th>
+      <th>Kävely (km)</th>
+      <th>Kuntopisteet yhteensä</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for urheilija in kuntoilijat %}
+      <tr>
+      <td>{{ urheilija[0] }}</td>
+      <td>{{ urheilija[1] }}</td>
+      <td>{{ urheilija[2] }}</td>
+      <td>{{ urheilija[3] }}</td>
+      <td>{{ urheilija[1] * 4 + urheilija[2] * 2 + urheilija[3] * 1 }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h3>Kuntopisteet:</h3>
+
+    {% for urheilija in kuntoilijat %}
+    {% if urheilija[1] * 4 + urheilija[2] * 2 + urheilija[3] * 1 > 100 %}
+        {{ urheilija[0] }}: Sinulla on hyvä kunto!
+        <br><br>
+    {% else %}
+        {{ urheilija[0] }}: Sinulla on tyydyttävä kunto.
+        <br><br>
+    {% endif %}
+    {% endfor %}
